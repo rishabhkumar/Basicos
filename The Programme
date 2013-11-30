@@ -1,0 +1,695 @@
+void menu();
+void ifelse();
+void switchcase();
+void loop();
+void dowhile();
+void sum();
+void genifelse();
+void voter();
+void leapyear();
+void salary();
+void nestedifelse();
+void electricity();
+void factfor();
+void tv();
+void genswitch();
+void monthno();
+void oddeven();
+void nestedswitch();
+void While();
+void fact();
+void rev();
+void palindrome();
+void armstrong();
+void series1();
+void series2();
+void series3();
+void series4();
+void For();
+void rightstar();
+void pyramidstar();
+void tower();
+void forarm();
+void whilepat();
+void forser1();
+void forser2();
+void forser3();
+void forser4();
+void main()
+ {long int pass,pass1,i;
+ clrscr();
+ printf("\n\n\n\t\t\tEnter the password: ");
+ scanf("%ld",&pass);
+ if(pass==1507)
+ {menu();
+ }
+ else
+ {for(i=3;i>0;i--)
+ {printf("\n \t\t\tBabaji ka thullu!!!!\n\t\tEnter the Password again(You've got %d chances left): ",i);
+  scanf("%ld",&pass1);
+  if(pass1==1507)
+  {menu();i=5;}}
+ }
+ getch();}
+void menu()
+{int n;
+char ch='y';
+clrscr();
+while(ch=='y'||ch=='Y')
+{ clrscr();
+ printf("\n\n\n\t\t\tWelcome to Coding Masters!\n\n\t\t\t");
+ system("pause");
+ clrscr();
+ printf("\nSelect the Category of programs you want to see, from below:\t");
+ printf("\n1. General Programmes\n2. If-Else Programmes\n3. Switch-Case Programmes\n4. Looping Programmes\n5. Exit\n");
+ scanf("%d",&n);
+ switch(n)
+  {
+   case 1:clrscr();
+	  printf("\nSelect the programme from below:\n");
+	  printf("\n1. To find the Sum of two nos. along with their average\n");
+	  sum();
+	  break;
+   case 2:ifelse();
+	  break;
+   case 3:switchcase();
+	  break;
+   case 4:loop();
+	  break;
+   case 5:exit(1);
+	  break;
+   default:printf("\nWrong Choice you duffer!\n\t\tDo you want to try again?(y/n):\t");
+	   scanf(" %c",&ch);
+   }
+	   }
+	   }
+  void ifelse()
+  {int n1;
+   clrscr();
+   printf("\nSelect from the following If-Else Programmes:\n");
+   printf("\n1. General If-Else\n2. Nested If-Else\n");
+   scanf("%d",&n1);
+   switch(n1)
+   {case 1: genifelse();
+	 break;
+    case 2: nestedifelse();
+	 break;
+    default:printf("\nWrong Choice selected fool!");
+    }
+    }
+    void switchcase()
+    {int n2;
+    clrscr();
+    printf("\nSelect from the following category of Switch-Case\n");
+    printf("\n1. General Switch-Case\n2. Nested Switch-Case\n");
+    scanf("%d",&n2);
+    switch(n2)
+      {case 1:genswitch();
+	      break;
+    case 2:nestedswitch();
+	break;
+    default:printf("\nWrong Choice again!\n");
+    }
+ }
+ void loop()
+ {int n3;
+ clrscr();
+ printf("\nSelect the category of loops from below:\n");
+ printf("\n1. While Loop-Programmes\n2. For Loop-Programmes\n3. Do-While Loop-Programmes\n");
+ scanf("%d",&n3);
+ switch(n3)
+ {case 1:While();
+	break;
+ case 2:For();
+ break;
+ case 3:dowhile();
+ break;
+ default:printf("\nSorry! Wrong Again\n Go die you idiot\n");
+ }
+ }
+ void sum()
+ {
+ float a,b,sum,avg;
+ clrscr();
+ printf("Enter the first number whose sum and avg is to b calculated\n");
+ scanf("%f",&a);
+ printf("Enter the second number whose sum and avg is to b calculated\n");
+ scanf("%f",&b);
+ sum=a+b;
+ avg=sum/2;
+ printf("The sum of the two numbers is:%f",sum);
+ printf("\n");
+ printf("The avg of the two numbers is:%f",avg);
+ getch();
+ }
+ void genifelse()
+ {int n3;
+ clrscr();
+ printf("\nSelect a Programme from below:\n");
+ printf("\n1. To accept voter age and simultaneously find their eligibility");
+ printf("\n2. To tell whether the year is a leap year or not\n3. To accept the basic pay of an employee and find out its salary details");
+ scanf("%d",&n3);
+ switch(n3)
+ {case 1:voter();break;
+ case 2:leapyear();
+ break;
+ case 3:salary();
+ break;
+ default:printf("\nBihari h k??\n");
+ }
+ }
+ void voter()
+ {exit(1);}
+ void leapyear()
+ {exit(1);}
+ void salary()
+ {exit(1);}
+ void nestedifelse()
+ {int n4;
+ clrscr();
+ printf("\nSelect the Programme from below:\n");
+ printf("\n1. To generate the Electricity Bill\n2. To Sell/Buy a TV with details\n");
+ scanf("%d",&n4);
+ switch(n4)
+ {case 1:electricity();break;
+ case 2:tv();
+ break;
+ default:printf("\nSorry! Wrong Choice\n");
+ }
+ }
+ void electricity()
+ {long int mno;
+ int rental=300,t=1;
+ float charge,units,rate;
+ clrscr();
+ printf("Enter the meter no\n");
+ scanf("%ld",&mno);
+ if(mno>0)
+ {printf("Enter the units consumed:\n");
+  scanf("%f",&units);
+  if(units>=0)
+  {if(units<100)
+  {
+  rate=4.0;}
+  else if(units<200)
+  {rate=3.0;
+  }
+  else
+  {rate=2.0;
+  }
+  }
+  else
+  {printf("Sorry units consumed is invalid\n");
+  t=0;
+  }
+  }
+  else
+  {printf("Meter number should b greater than 0\n");
+  t=0;
+  }
+  if(t==1)
+  {charge=rental+rate*units;
+  printf("Meter no:%ld\n",mno);
+  printf("Units consumed:%f\n",units);
+  printf("Rate per unit:%f\n",rate);
+  printf("===============================\n");
+  printf("Charge to be paid in Rs is:%f",charge);
+  }
+  getch();}
+  void tv()
+  {char type;
+ int t=1,slab,size;
+ float dsc,net,mrp;
+ clrscr();
+ printf("Enter the T.V type: ");
+ scanf("%c",&type);
+ switch(type)
+ { case 'b':
+   case 'B':slab=10;
+	    break;
+   case 'c':
+   case 'C':printf("\nEnter the size of T.V");
+	    scanf("%d",&size);
+	    switch(size)
+	    {case 17:slab=15;
+		     break;
+	     case 21:slab=20;
+		     break;
+	     default:printf("\nNo T.V available of this size");
+		     t=0;
+		     break;
+		      }
+	     break;
+   default: printf("\nNo T.V available of this type\n");
+	   t=0;
+	   break;
+	    }
+	    if(t==1)
+	    {printf("\nEnter the MRP of the T.V: ");
+	     scanf("%f",&mrp);
+	     if(mrp>0)
+	     {
+	     dsc=slab*mrp/100;
+	     net=mrp-dsc;
+	     printf("\nType of t.v is:%c",type);
+	     printf("\nM.r.p of t.v is:%f",mrp);
+	     printf("\nDiscount on t.v is:%d%",slab);
+	     printf("\nTotal discount in rs is:%f",dsc);
+	     printf("\nNet amount to be paid is:%f",net);
+	     }
+	     else
+	     {printf("Mrp should b >0\n");
+	     }
+	     }
+	     getch();
+}
+ void genswitch()
+ {int n5;
+ clrscr();
+ printf("\nSelect the programmes from below:\n");
+ printf("1. To find the season of month by entering its month number");
+ printf("\n2. To find the number of odd-evens any number of time you want");
+ scanf("%d",&n5);
+ switch(n5)
+{case 1:monthno();break;
+ case 2:oddeven();break;
+ default:printf("\nSorry! Try Again!\n");
+ }
+ }
+ void monthno()
+ {int mno;
+ clrscr();
+ printf("\nEnter a Month Number of which you want to find out the name of the month\n");
+ scanf("%d",&mno);
+ switch(mno)
+ {case 11:
+  case 12:
+  case 1:
+  case 2: printf("\nThis is a Winter Month\n");
+	break;
+  case 3:
+  case 4:
+  case 5:
+  case 6:printf("\nThis is a Summer Month\n");
+       break;
+  case 10:
+  case 7:
+  case 8:
+  case 9:printf("\nThis is a Monsoon Month\n");
+       break;
+  default: printf("\nSorry! You entered the Wrong Month Number!\n");
+  }
+  getch();
+  }
+  void oddeven()
+  {char ch='y';
+  int c1=0,c2=0,n;
+  clrscr();
+  while(ch=='y'||ch=='Y')
+  {printf("Enter the number");
+  scanf("%d",&n);
+  if(n%2==0)
+  {c1++;
+  }
+  else
+  {c2++;
+  }
+  printf("\nDo you want to enter more no(y/n)");
+  scanf(" %c",&ch);
+  }
+  printf("\nThe count of even no is:%d",c1);
+  printf("\nThe count of odd no is:%d",c2);
+  getch();}
+ void nestedswitch()
+ {clrscr();
+ printf("\nSelect a Programme from the below:\n");
+ printf("\n1.");
+ }
+ void While()
+ {int n6;
+ clrscr();
+ printf("\nSelect the Programme from the following:\n");
+ printf("\n1. To find out a Factorial of a given Number\n2. To find the Reverse of a given Number\n");
+ printf("3. To check whether the given number is a Palindrome or Not");
+ printf("\n4.  To  check whether a given no. is an Armstrong Number or not\n5. To find the sum of series: 1+x+x^2+x^3. . . upto 'n' terms");
+ printf("\n6. To find the sum of series: 1+x^2+x^4+x^6+. . . upto 'n' terms\n7. To find the sum of series: 1+1/x+1/(x^2)+1/(x^3)+. . . upto 'n' terms");
+ printf("\n8. To find the sum of series: 1+1/(x^2)+1/(x^4)+1/(x^6)+. . . upto 'n' terms");
+ printf("\n9. To display \n*\n**\n***. . . upto 'n' lines");
+ scanf("%d",&n6);
+ switch(n6)
+ {case 1: fact();
+	  break;
+  case 2: rev();
+	  break;
+  case 3: palindrome();
+	  break;
+  case 4: armstrong();
+	  break;
+  case 5: series1();
+	  break;
+  case 6: series2();
+	  break;
+  case 7: series3();
+	  break;
+  case 8: series4();
+	  break;
+  case 9: whilepat();
+	  break;
+  default:printf("\nSorry! Wrong Option Selected!");
+  }
+  }
+  void fact()
+ {int n,i,mul=1;
+ clrscr();
+ printf("\nEnter the Number of which you want to find the Factorial:\t");
+ scanf("%d",&n);
+ i=n;
+ while(i>0)
+ {mul=mul*i;
+ i--;}
+ printf("\nThe value of %d!(Factorial) is : %d",n,mul);
+ getch();}
+
+ void rev()
+ {int rev=0,n,m,l;
+ clrscr();
+ printf("\nEnter the Number of which you want to find out the Reverse:\t");
+ scanf("%d",&n);
+ l=n;
+ while(n>0)
+ {m=n%10;
+ rev=rev*10+m;
+ n=n/10;   }
+ printf("\nThe Reverse of the Number %d is %d",l,rev);
+ getch();
+ }
+
+ void palindrome()
+ {int n,i,rev=0,m;
+ clrscr();
+ printf("\nEnter a Number you want to be checked with Palindromic Condition:\t");
+ scanf("%d",&n);
+ i=n;
+ while(n>0)
+ {m=n%10;
+ rev=rev*10+m;
+ n=n/10;}
+ if(rev==i)
+ {printf("\nThe Number you entered is a Palindrome!");
+ }
+ else
+ {printf("\nThe Number you entered is not a Palindrome!");
+ }getch();
+ }
+ void armstrong()
+ {int n,i,m=0,sum=0;
+ clrscr();
+printf("\nEnter the Number on which you want to check the Armstrong Condition:\t");
+scanf("%d",&n);
+i=n;
+while(i>0)
+{m=i%10;
+sum=sum+m*m*m;
+i=i/10;
+}
+if(sum==n)
+{printf("\nThe Number you entered is an Armstrong Number!");
+}
+else
+{printf("\nSorry! The Number you entered is not a Armstrong Number!");
+}
+getch();
+}
+
+void series1()
+{int x,p,i=1,mul=1,sum=1;
+clrscr();
+printf("\nEnter a value of variable 'x' of which you want to find out the series:\t");
+scanf("%d",&x);
+printf("\nEnter the number of terms in the series:\t");
+scanf("%d",&p);
+while(i<p)
+{mul=x*mul;
+sum=sum+mul;i++;}
+printf("\nThe Value of the series is %d",sum);
+getch();
+}
+
+void series2()
+{int x,n,i=1,t=0,sum=1,mul=1;char ch,ch1;
+clrscr();
+while(t==0){
+printf("\nENter the value of variable 'x':\t");
+scanf("%d",&x);
+printf("\nEnter the Total Number of terms you want in the series:\t");
+scanf("%d",&n);
+while(i<n)
+{mul=mul*x*x;
+sum=sum+mul;
+i++;}
+printf("\n\t\t\tCalculating. . . .\n\t\t\t");
+system("pause");
+printf("\nThe sum of the series with variable %d upto %d number of terms is %d",x,n,sum);
+printf("\n\nSo, Satisfied?(y/n)");
+scanf("%c",&ch);
+if(ch=='y')
+{printf("\n\t\t\tWell, Thanks for that Aprrectiated!");
+printf("\n\t\t\tSo, want to try more?(y/n)");
+scanf(" %c",&ch1);
+if(ch1=='y'){clrscr();
+t=0;}
+else{t=1;}
+}
+else{printf("\n\t\t\tWell then, Screw you! >:(");
+t=1;}
+}getch();
+}
+
+void series3()
+{float x,n,sum=1.00,mul=1.00;int i=1;
+clrscr();
+printf("\nEnter the value of variable 'x':\t");
+scanf("%f",&x);
+printf("\nEnter the Number of terms in the series:\t");
+scanf("%f",&n);
+while(i<n)
+{mul=mul*x;
+sum=sum+1/mul;
+i++;}
+printf("\nThe sum of the series is: %f",sum);
+getch();
+}
+
+void series4()
+{float x,n,sum=1.00,mul=1.00;int i=1;
+clrscr();
+printf("\nEnter the value of variable 'x':\t");
+scanf("%f",&x);
+printf("\nEnter the Number of terms in the series:\t");
+scanf("%f",&n);
+while(i<n)
+{mul=mul*x*x;
+sum=sum+1/mul;
+i++;}
+printf("\nThe sum of the series is: %f",sum);
+getch();
+}
+
+void nestedwhile()
+ {int o=1,i;
+ clrscr();
+ while(o<3)
+ {printf("\nThis is Outer Loop Execution %d times",o);
+  i=1;
+  while(i<3)
+ {printf("\n\tThis is Inner Loop Execution %d times",i);
+ i++;}
+o++;
+} getch();
+ }
+
+
+void For()
+{int n;
+clrscr();
+printf("\nSelect a Programme from the below:");
+printf("\n1. To display \n*\n**\n***. . . upto 'n' lines");
+printf("\n2. To display Pyramid of '*' with 'n' number of lines");
+printf("\n3. To find a Factorial of a given Number");
+printf("\n4. To check whether a given number is an Armstrong Number or not");
+printf("\n5. To find the sum of series: 1+x+x^2+x^3. . . upto 'n' terms");
+printf("\n6. To find the sum of series: 1+x^2+x^4+x^6+. . . upto 'n' terms\n7. To find the sum of series: 1+1/x+1/(x^2)+1/(x^3)+. . . upto 'n' terms");
+printf("\n8. To find the sum of series: 1+1/(x^2)+1/(x^4)+1/(x^6)+. . . upto 'n' terms");
+printf("\n9. To display a Tower Design of given height\n");
+scanf("%d",&n);
+switch(n)
+{case 1:rightstar();
+	break;
+ case 2:pyramidstar();
+	break;
+ case 3:factfor();
+	break;
+ case 4:forarm();
+	break;
+ case 5:forser1();
+	break;
+ case 6:forser2();
+	break;
+ case 7:forser3();
+	break;
+ case 8:forser4();
+	break;
+ case 9:tower();
+	break;
+ default: printf("\nSorry! Wrong Choice Selected\n");
+ }
+getch(); }
+
+ void tower()
+ {int n,i,j,k,l;
+clrscr();
+printf("\nEnter the length of the tower: ");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{for(j=(n-i);j>(-1);j--)
+{printf(" ");}printf("*");
+for(l=0;l<i;l++)
+{printf("  ");
+} printf("*\n");
+}
+}
+
+ void rightstar()
+ {int n,i,j;
+clrscr();
+printf("\nHow many lines of stars you want?:\t");
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{for(j=1;j<=i;j++)
+{printf("*");
+}printf("\n");
+}
+getch();}
+
+void pyramidstar()
+{int n,i,j,k;
+clrscr();
+printf("\nEnter the length of Pyramid:\t");
+scanf("%d",&n);
+for(i=n;i>0;i--)
+{
+for(j=1;j<=i;j++)
+{printf("  ");}
+for(k=0;k<(n-i+1);k++)
+{printf(" *  ");
+}printf("\n");}
+getch();}
+
+void factfor()
+{int n,fact=1,i;
+clrscr();
+printf("\nEnter the Number of which you want to findout the Factorial of:\t");
+scanf("%d",&n);
+for(i=n;i>0;i--)
+{fact=fact*i;}
+printf("\nThe Factorial of the Number %d is %d",n,fact);
+getch();}
+void forarm()
+{int m,arm=0,n,n1;
+ clrscr();
+ printf("Enter the number whose armstrong number is to be calculated : ");
+ scanf("%d",&n);
+ for(n1=n;n1>0;n1=n1/10)
+ {m=n1%10;
+  arm=arm+m*m*m;
+  }
+  if(n==arm)
+  {printf("\nGenius!! It is an Armstrong No");
+  }
+  else
+  {printf("\nSorry!! It is not an Armstrong No :");
+  }
+  getch();
+  }
+  void whilepat()
+  { int n,i=1,j;
+  clrscr();
+  printf("Enter the number of lines of pattern you want\n");
+  scanf("%d",&n);
+  while(i<=n)
+  {j=1;
+   printf("\n");
+  while(j<=i)
+  {printf("*");
+   j++;
+   }
+   i++;
+   }
+   getch();
+   }
+ void forser1()
+ {int i,n,n1,sum=1,term=1;
+ clrscr();
+ printf("How many terms do you want in your series? ");
+ scanf("%d",&n);
+ printf("\nEnter the term for which sum is to be calculated ");
+ scanf("%d",&n1);
+ for(i=1;i<n;i++)
+ {term=term*n1;
+  sum=sum+term;
+  }
+  printf("\nThe Sum of the given Series is : %d",sum);
+  getch();
+  }
+  void forser2()
+  {
+  int i,n,n1,sum=1,term=1;
+  clrscr();
+  printf("How many terms do you want in your series ? ");
+  scanf("%d",&n);
+  printf("\nEnter the term for which sum is to be calculated ");
+  scanf("%d",&n1);
+  for(i=1;i<n;i++)
+  {
+   term=term*n1*n1;
+   sum=sum+term;
+   }
+   printf("\nThe Sum of the given Series is : %d",sum);
+   getch();
+   }
+  void forser3()
+  {float i,n,n1,sum=1.0,term=1.0,mul=1.0;
+ clrscr();
+ printf("How many terms do you want in your series ? ");
+ scanf("%f",&n);
+ printf("\nEnter the term for which sum is to be calculated ");
+ scanf("%f",&n1);
+ for(i=1;i<n;i++)
+ {term=term*n1;
+  mul=1/term;
+  sum=sum+mul;
+  }
+  printf("\nThe Sum of the given Series is : %f",sum);
+  getch();
+  }
+
+  void forser4()
+  {
+   float i,n,n1,sum=1.0,term=1.0,mul=1.0;
+ clrscr();
+ printf("How many terms do you want in your series ? ");
+ scanf("%f",&n);
+ printf("\nEnter the term for which sum is to be calculated ");
+ scanf("%f",&n1);
+ for(i=1;i<n;i++)
+ {term=term*n1*n1;
+  mul=1/term;
+  sum=sum+mul;
+  }
+  printf("\nThe Sum of the given Series is : %f",sum);
+  getch();
+  }
+ void dowhile()
+ {
+  exit(1);
+  }
